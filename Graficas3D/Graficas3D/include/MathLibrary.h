@@ -18,7 +18,7 @@ inline float raizNewton(float valor) {
 
   // Bucle while hasta que la diferencia entre x e y sea menor que epsilon.
   while (x-y>epsilon){
-    x = (x + y) / y; //Formula para poder sacar la aproximacion de x
+    x = (x + y) / 2.0f; //Formula para poder sacar la aproximacion de x
     y = valor / x;   //Nuevo valor de y
   }
   return x;  //Regresa la aproximacion de la raiz cuadrada
