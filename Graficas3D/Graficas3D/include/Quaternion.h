@@ -36,9 +36,9 @@ public:
 	 */
 	Quaternion(float angleRad, const Vector3& axis) {
 		float halfAngle = angleRad / 2;
-		float sinHalfAngle = sin(halfAngle);
+		float sinHalfAngle = Msin(halfAngle);
 
-		w = cos(halfAngle);
+		w = Mcos(halfAngle);
 		x = axis.x * sinHalfAngle;
 		y = axis.y * sinHalfAngle;
 		z = axis.z * sinHalfAngle;
@@ -91,7 +91,7 @@ public:
 	 */
 	float
 	magnitud() const {
-		return raizNewton(x * x + y * y + z * z + w * w);
+		return MraizNewton(x * x + y * y + z * z + w * w);
 	}
 	/**
 	 * Normaliza el cuaternión para que tenga una magnitud de 1.

@@ -61,7 +61,7 @@ public:
 	 */
 	float 
 	magnitud() const {
-		return raizNewton(x * x + y * y + z * z);
+		return MraizNewton(x * x + y * y + z * z);
 	}
 	/**
 	 * Devuelve el vector normalizado (unidad), es decir,con magnitud 1.
