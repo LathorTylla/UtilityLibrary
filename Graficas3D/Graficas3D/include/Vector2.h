@@ -62,7 +62,7 @@ public:
 	 */
 	float
 		magnitud() const {
-		return raizNewton(x * x + y * y);
+		return MraizNewton(x * x + y * y);
 	}
 
 	/**

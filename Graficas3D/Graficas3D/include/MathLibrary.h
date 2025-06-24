@@ -8,7 +8,7 @@
  * @return La aproximación de la raíz cuadrada del valor dado.
  */
 
-inline float raizNewton(float valor) {
+inline float MraizNewton(float valor) {
   if (valor < 0) {
     return 0; //Regresa si el valor no es positivo
   }
@@ -33,7 +33,7 @@ inline float raizNewton(float valor) {
  * @param angle Ángulo en radianes del cual se quiere calcular el coseno.
  * @return La aproximación del coseno del ángulo dado.
  */
-inline float cos(float angle) {
+inline float Mcos(float angle) {
   float result = 1.0f;                  // Primer término de la serie (cos(0) = 1)
   float term = 1.0f;                    // Término actual de la serie
   float angle_squared = angle * angle;  // Precalcular el ángulo al cuadrado
@@ -54,7 +54,7 @@ inline float cos(float angle) {
  * @return La aproximación del seno del ángulo dado.
  */
 
-inline float sin(float angle) {
+inline float Msin(float angle) {
   float result = 0.0f;                  // El seno de 0 es 0
   float term = angle;                   // Primer término de la serie
   float angle_squared = angle * angle;  // Calcular el ángulo al cuadrado
@@ -76,9 +76,9 @@ inline float sin(float angle) {
  * @return La aproximación de la tangente del ángulo dado, o 0 si el coseno es 0.
  */
 
-inline float tan(float angle) {
-  float sinVal = sin(angle);            // Calcular el seno del ángulo
-  float cosVal = cos(angle);            // Calcular el coseno del ángulo
+inline float Mtan(float angle) {
+  float sinVal = Msin(angle);            // Calcular el seno del ángulo
+  float cosVal = Mcos(angle);            // Calcular el coseno del ángulo
   if (cosVal == 0) {
     return 0; // Evitar divisiones por 0
   }
@@ -92,7 +92,7 @@ inline float tan(float angle) {
  * @param degrees Ángulo en grados.
  * @return El ángulo convertido a radianes.
  */
-inline float degToRad(float degrees) {
+inline float MdegToRad(float degrees) {
   return degrees * (3.1416f / 180.0f);
 }
 
@@ -103,6 +103,6 @@ inline float degToRad(float degrees) {
  * @param radians Ángulo en radianes.
  * @return El ángulo convertido a grados.
  */
-inline float radToGrad(float radians) {
+inline float MradToGrad(float radians) {
   return radians * (180.0f / 3.1416f);
 }
